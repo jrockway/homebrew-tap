@@ -5,51 +5,51 @@
 class Jlog < Formula
   desc "Pretty-print JSON logs"
   homepage "https://github.com/jrockway/json-logs"
-  version "0.0.6"
+  version "0.0.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jrockway/json-logs/releases/download/v0.0.6/jlog_v0.0.6_darwin_arm64"
-      sha256 "da95426f786a57efca2fbd08d643a4fcd24219b1de1ce357ed4e199417463fe4"
+      url "https://github.com/jrockway/json-logs/releases/download/v0.0.7/jlog_v0.0.7_darwin_arm64"
+      sha256 "dd8396fbd8645bc622bab43f03cf11e24e8d67c65fff6074112fe9206861bd59"
 
       def install
-        bin.install "jlog_v0.0.6_darwin_arm64" => "jlog"
+        bin.install "jlog_v0.0.7_darwin_arm64" => "jlog"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jrockway/json-logs/releases/download/v0.0.6/jlog_v0.0.6_darwin_amd64"
-      sha256 "f1d9cbec62fb8466cb97eff78624c908575ae7f96c0b202f701d116fc68cb663"
+      url "https://github.com/jrockway/json-logs/releases/download/v0.0.7/jlog_v0.0.7_darwin_amd64"
+      sha256 "40b6c3f595c577224c3516a42f977c1f45c43fabbc8fa9c57f0e7c2b01c79be3"
 
       def install
-        bin.install "jlog_v0.0.6_darwin_amd64" => "jlog"
+        bin.install "jlog_v0.0.7_darwin_amd64" => "jlog"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jrockway/json-logs/releases/download/v0.0.6/jlog_v0.0.6_linux_arm64"
-      sha256 "af546c115eff4b27d468cb856c8f8023d79ff74f6767be4fb1acce1c874f38e7"
+    if Hardware::CPU.intel?
+      url "https://github.com/jrockway/json-logs/releases/download/v0.0.7/jlog_v0.0.7_linux_amd64"
+      sha256 "bc42bdded2a006f98d846f62761d49c4c99aed3beaa5fe0cb56c0f83c72e26cf"
 
       def install
-        bin.install "jlog_v0.0.6_linux_arm64" => "jlog"
+        bin.install "jlog_v0.0.7_linux_amd64" => "jlog"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jrockway/json-logs/releases/download/v0.0.6/jlog_v0.0.6_linux_amd64"
-      sha256 "28f2d0c62eaf632310c8e9f00277d9c84c210feb9d4b96c8181537b59d878cd8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jrockway/json-logs/releases/download/v0.0.7/jlog_v0.0.7_linux_arm64"
+      sha256 "c6d54db1f835b1849191adf9773952bae02e1d297a9983cea0e1ae21aa6eebc3"
 
       def install
-        bin.install "jlog_v0.0.6_linux_amd64" => "jlog"
+        bin.install "jlog_v0.0.7_linux_arm64" => "jlog"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jrockway/json-logs/releases/download/v0.0.6/jlog_v0.0.6_linux_armv6"
-      sha256 "26043c9bc09a9c67cf548993562c837f1c70e4aca04154f7bc8c244468bf6069"
+      url "https://github.com/jrockway/json-logs/releases/download/v0.0.7/jlog_v0.0.7_linux_armv6"
+      sha256 "8744d5d3f8e67e3942fe8b0d6ee99de9a05b3a2183a871fd12dce4b65095c2a9"
 
       def install
-        bin.install "jlog_v0.0.6_linux_armv6" => "jlog"
+        bin.install "jlog_v0.0.7_linux_armv6" => "jlog"
       end
     end
   end
